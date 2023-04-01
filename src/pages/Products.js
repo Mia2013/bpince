@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import {  Grid, Typography, Container, Box } from "@mui/material";
+import { Grid, Typography, Container, Box } from "@mui/material";
 import PageTitle from "../components/PageTitle";
 
 export default function Products() {
@@ -33,8 +33,8 @@ export default function Products() {
   ];
 
   return (
-    <Grid container id="wines" sx={{ flexWrap: "wrap" }}>
-      <Container maxWidth="lg">
+    <Container maxWidth="lg" id="wines">
+      <Grid container  sx={{ flexWrap: "wrap" }}>
         <Grid item xs={12} sx={{ textAlign: "center" }}>
           <PageTitle title="Boraink"></PageTitle>
         </Grid>
@@ -87,7 +87,7 @@ export default function Products() {
             </Box>
           ))}
         </Grid>
-      </Container>
-    </Grid>
+      </Grid>
+    </Container>
   );
 }

@@ -52,7 +52,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
           <CssBaseline />
-          <Toolbar id="back-to-top-anchor" sx={{width: '10px'}} />
+          <Toolbar id="back-to-top-anchor"/>
 
 
           <ResponsiveAppBar pages={pages} />

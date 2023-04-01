@@ -23,6 +23,7 @@ export default function PageTitle({ title, id }) {
       </Typography>
       <Divider
         data-aos="fade-down"
+        data-aos-duration="400"
         sx={{
           width: { xs: "8%", sm: "7%", md: "4%" },
           border: "2px solid #1e8449      ",
