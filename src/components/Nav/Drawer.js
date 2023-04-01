@@ -23,9 +23,6 @@ function DrawerAppBar(props) {
         component="a"
         href="/"
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
           my: 1,
         }}
       >
@@ -33,7 +30,7 @@ function DrawerAppBar(props) {
           component="img"
           className="logo"
           sx={{
-            width: "40%",
+            width: "50%",
           }}
           src={`${process.env.PUBLIC_URL}/pic/logo.svg`}
         ></Typography>
@@ -56,7 +53,7 @@ function DrawerAppBar(props) {
                   to={page.to}
                   spy={true}
                   smooth={true}
-                  offset={0}
+                  offset={-70}
                   duration={500}
                 >
                   {page.name}
