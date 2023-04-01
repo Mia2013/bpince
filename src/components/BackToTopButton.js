@@ -23,6 +23,8 @@ function ScrollTop(props) {
       anchor.scrollIntoView({
         block: "center",
         behavior: "smooth",
+        inline: "nearest",
+
       });
     }
   };

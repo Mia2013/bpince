@@ -27,7 +27,7 @@ export default function Home() {
     },
   ];
   return (
-    <Grid container sx={{ mt: 4 }}>
+    <Grid container sx={{ mt: 4 }} id="back-to-top-anchor">
       <Grid item xs={12} sx={{ maxwidth: "100%", overflow: "hidden" }}>
         <AutoplaySlideshow images={images} />
       </Grid>

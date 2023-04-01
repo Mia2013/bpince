@@ -4,6 +4,7 @@ import { Typography, Grid, Container } from "@mui/material";
 import PageTitle from "../components/PageTitle";
 
 export default function About() {
+  
   return (
     <Container maxWidth="lg" id="about">
       <Grid container sx={{ my: { xs: 3, md: 8 }, mx: "auto" }} >

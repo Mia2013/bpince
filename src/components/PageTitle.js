@@ -26,7 +26,7 @@ export default function PageTitle({ title, id }) {
         data-aos-duration="400"
         sx={{
           width: { xs: "8%", sm: "7%", md: "4%" },
-          border: "2px solid #1e8449      ",
+          border: "2px solid #1e8449 ",
           marginTop: { xs: -2.3, md: -3, lg: -4 },
         }}
       />

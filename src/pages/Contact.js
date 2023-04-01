@@ -14,7 +14,7 @@ export default function Contact() {
         <Grid
           item
           xs={12}
-          sx={{ textAlign: { xs: "left", md: "center" }, my: 3 }}
+          sx={{ textAlign: "center" , my: 3 }}
         >
           <Typography
             variant="subtitle1"

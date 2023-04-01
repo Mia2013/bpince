@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Button,
@@ -6,6 +6,7 @@ import {
   Box,
   IconButton,
   Typography,
+  Divider,
 } from "@mui/material";
 import { Link } from "react-scroll";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -13,9 +14,15 @@ import MenuIcon from "@mui/icons-material/Menu";
 import DrawerAppBar from "./Drawer";
 
 const ResponsiveAppBar = ({ pages }) => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleSetActiveSection = (sectionId) => {
+    setActiveSection(sectionId);
   };
 
   return (
@@ -65,6 +72,7 @@ const ResponsiveAppBar = ({ pages }) => {
                 offset={-50}
                 duration={400}
                 key={page.name}
+                onSetActive={handleSetActiveSection}
               >
                 <Button
                   key={page.name}
@@ -74,10 +82,14 @@ const ResponsiveAppBar = ({ pages }) => {
                     fontSize: "1rem",
                     fontWeight: "bolder",
                     mx: 1,
+                    
                   }}
+                  className={page.to === `#${activeSection}` ? "active" : ""}
+
                 >
                   {page.name}
                 </Button>
+           
               </Link>
             ))}
           </Box>
@@ -114,18 +126,24 @@ const ResponsiveAppBar = ({ pages }) => {
         >
           <MenuIcon />
         </IconButton>
-
         <Typography
-          component="img"
           className="logo"
+          component="a"
+          href="/"
           sx={{
             width: { xs: "150px", sm: "180px" },
             position: "absolute",
             left: "50%",
             transform: "translateX(-50%)",
           }}
-          src={`${process.env.PUBLIC_URL}/pic/logo.svg`}
-        ></Typography>
+        >
+          <Typography
+            component="img"
+            className="logo"
+            sx={{ width: "100%" }}
+            src={`${process.env.PUBLIC_URL}/pic/logo.svg`}
+          ></Typography>
+        </Typography>
       </Box>
     </AppBar>
   );
