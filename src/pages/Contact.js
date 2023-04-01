@@ -35,6 +35,8 @@ export default function Contact() {
             justifyContent: "center",
             flexDirection: "column",
           }}
+          data-aos="fade-right"
+
         >
           <Divider color="#a97142" />
           <Box sx={{ my: 4, mx: 2 }}>
@@ -129,7 +131,8 @@ export default function Contact() {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ textAlign: "center", p: 3 }}>
+        <Grid item xs={12} md={6} sx={{ textAlign: "center", p: 3 }}           data-aos="fade-left"
+>
           <Typography
             noWrap
             component="img"

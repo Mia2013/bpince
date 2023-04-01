@@ -23,4 +23,5 @@
 
 .active {
   border: #1e8449 solid 0.5px;
+  border-radius: 50%;
 }
